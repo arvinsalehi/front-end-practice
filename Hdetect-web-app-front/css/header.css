@@ -1,0 +1,89 @@
+/*header*/
+
+.contact-fast-link {
+    border-bottom: 1px solid #cbcbcb;
+}
+
+.navbar-brand > img {
+    height: 80px;
+}
+
+nav {
+    padding: 4rem;
+    width: 80%;
+    border-top: 1px solid #E2E8F0;
+    border-bottom: 3px solid #0eea0e;
+    margin: auto;
+}
+
+/*Logo*/
+.navbar-brand {
+    font-size: 2rem;
+    /*margin-left: 3rem;*/
+}
+
+.state-control > button > i {
+    font-size: 30px;
+}
+
+.state-control > button {
+    border-radius: 20%;
+    padding: .3rem .5rem;
+    background-color: red;
+}
+
+.dropdown-item {
+    font-size: 2rem;
+}
+
+/*overriding li in bootstrap navbar*/
+.nav-item {
+    margin: 1rem 2rem;
+}
+
+/*overriding links in bootstrap navbar*/
+nav li > a {
+    color: black;
+}
+
+nav li > a:hover {
+    color: red;
+}
+
+/*nav icons style*/
+nav i {
+    flex-grow: 1;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .navbar {
+        justify-content: space-between;
+    }
+
+
+    .hamburger {
+        padding: 1.7rem;
+    }
+
+}
+
+@media only screen and (min-width: 1700px) {
+    /*Logo*/
+    .navbar-brand {
+        font-size: 3.7rem;
+        /*margin-left: 3rem;*/
+    }
+
+    /*overriding links in bootstrap navbar*/
+    nav li > a {
+        color: black;
+        font-size: 1.7rem;
+    }
+
+    /*nav icons style*/
+    nav i {
+        font-size: 3.7rem;
+        flex-grow: 1;
+    }
+}

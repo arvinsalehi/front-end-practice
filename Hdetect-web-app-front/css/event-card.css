@@ -1,0 +1,152 @@
+/* -----------------event card------------------------*/
+
+.event-wrap {
+    /*max-height: 80vh;*/
+    /*overflow-x: scroll;*/
+    /*overflow-y: hidden;*/
+}
+
+.event-card {
+    border-radius: 7px;
+    padding: 1rem;
+    /*background-color: #32315f;*/
+    background-color: blue;
+    border: 3px solid #00d475;
+    /*box-shadow: red 1px 1px 10px 1px;*/
+}
+
+.event-card > .img-wrap {
+    background-color: #000167;
+    /*height: 30px;*/
+    border-top-right-radius: 7px;
+    border-top-left-radius: 7px;
+}
+
+.event-img-link {
+    width: 70%;
+    /*max-height: 4rem;*/
+}
+
+.event-img {
+    width: 100%;
+    height: 100%;
+    /*max-height: 4rem;*/
+    border-radius: 7px;
+}
+
+.event-dashboard-wrap {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+.icon-btn {
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
+
+.event-dashboard-wrap > .popup > button > i {
+    font-size: 4rem;
+}
+
+.timedate > .date, .timedate > .hour {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.type-source > .type, .type-source > .source {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.timedate, .type-source {
+    font: small-caps lighter 1.7rem "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+    text-align: left;
+    font-weight: 400;
+    width: 100%;
+    color: #fff;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.timedate {
+    border-left: 3px solid #ed1f24;
+}
+
+.type-source {
+    border-right: 3px solid #ed1f24;
+}
+
+.event-card:hover {
+    /*box-shadow: red 1px 1px 10px 10px;*/
+}
+
+/* ------------ dashboard---------------------------------- */
+
+#dashboard {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    background-color: transparent;
+    flex: 1;
+    margin: 1rem;
+}
+
+.dashboard-inner {
+    flex-direction: column;
+    height: 50%;
+    width: 100%;
+    display: flex;
+    margin: 2rem;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.15);
+    border-radius: 1.5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.dashboard-item > a {
+    height: 100%;
+}
+
+.dashboard-item > .popup > a:hover {
+    transition: .5s;
+    transform: scale(2);
+}
+
+@media only screen and (max-width: 768px) {
+    .events-dashboard-wrap {
+        flex-direction: column;
+    }
+
+    .event-card:last-child {
+        margin-bottom: 7rem !important;
+    }
+
+    #dashboard {
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        bottom: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    .dashboard-inner {
+        flex-direction: row;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        margin: 0;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #f4f7fd;
+        border-radius: 1.5rem 1.5rem 0 0;
+        padding: 2rem;
+    }
+}

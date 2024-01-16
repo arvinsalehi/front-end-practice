@@ -1,0 +1,151 @@
+.start-btn-wrap {
+    margin-top: 7rem;
+    margin-bottom: 7rem;
+}
+
+#app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    border-radius: 4rem;
+    height: 100%;
+    width: 60%;
+    outline: none;
+    border: 1px solid green;
+    cursor: pointer;
+    box-shadow: 0 0 10px 1px red;
+}
+
+#app > span {
+    font: small-caps lighter 2rem "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+}
+
+#app:hover {
+    box-shadow: 0 0 10px 10px green;
+
+}
+
+.base-timer {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.base-timer__svg {
+    transform: scaleX(-1);
+}
+
+.base-timer__circle {
+    fill: none;
+    stroke: none;
+}
+
+.base-timer__path-elapsed {
+    stroke-width: 7px;
+    stroke: grey;
+}
+
+.base-timer__path-remaining {
+    stroke-width: 7px;
+    stroke-linecap: round;
+    transform: rotate(90deg);
+    transform-origin: center;
+    transition: 1s linear all;
+    fill-rule: nonzero;
+    stroke: currentColor;
+}
+
+.base-timer__path-remaining.green {
+    color: rgb(65, 184, 131);
+}
+
+.base-timer__path-remaining.orange {
+    color: orange;
+}
+
+.base-timer__path-remaining.red {
+    color: red;
+}
+
+.base-timer__label {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+}
+
+/* ------------ dashboard---------------------------------- */
+
+#dashboard {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    background-color: transparent;
+    flex: 0;
+    height: 100%;
+    margin: 1rem;
+}
+
+.dashboard-inner {
+    flex-direction: column;
+    height: 50%;
+    width: 100%;
+    display: flex;
+    margin: 2rem;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.15);
+    border-radius: 1.5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.dashboard-item > a {
+    height: 100%;
+}
+
+.dashboard-item > .popup > a:hover {
+    transition: .5s;
+    transform: scale(2);
+}
+
+@media only screen and (max-width: 768px) {
+    .events-dashboard-wrap {
+        flex-direction: column;
+    }
+
+    .event-card:last-child {
+        margin-bottom: 7rem !important;
+    }
+
+    #dashboard {
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        bottom: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    .dashboard-inner {
+        flex-direction: row;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        margin: 0;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #f4f7fd;
+        border-radius: 1.5rem 1.5rem 0 0;
+        padding: 2rem;
+    }
+}
