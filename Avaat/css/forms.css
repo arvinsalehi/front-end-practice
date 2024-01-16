@@ -1,0 +1,481 @@
+::placeholder {
+    text-align: center;
+    direction: rtl;
+}
+
+
+.container-fluid {
+    height: 100vh;
+    width: 100vw;
+    padding: 0;
+    background-color: grey;
+    overflow-x: hidden;
+}
+
+.wrap {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+.gear-wrap {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.circle-wrap, .box-wrap {
+    /*height: fit-content;*/
+    display: flex;
+    justify-content: center;
+    /*flex-direction: column;*/
+    align-items: center;
+    padding: 1rem;
+    /*border: 3px solid red;*/
+    z-index: 1;
+
+}
+
+.circle-wrap {
+    order: 2;
+
+}
+
+.action-area {
+    display: flex;
+    flex-direction: row;
+    white-space: nowrap;
+    order: 2;
+    z-index: 1;
+    scroll-snap-type: x mandatory;
+    /*overflow: auto;*/
+    width: 100%;
+    scroll-behavior: smooth;
+}
+
+.step {
+    /*display: inline-block;*/
+    /*width: 100vw;*/
+    flex: 0 0 100%;
+}
+
+.action-area > * {
+    scroll-snap-align: start;
+    /*tab-index: -1;*/
+}
+
+.box-wrap {
+    justify-content: start;
+}
+
+.box-wrap {
+    height: 100%;
+    width: 25%;
+}
+
+.box-wrap-left {
+    order: 1;
+}
+
+.box-wrap-right {
+    order: 3;
+}
+
+/*mobile*/
+
+.input-group > input {
+    padding: 1rem;
+    border-radius: 3rem;
+}
+
+.input-group-prepend:first-child > span {
+    background-color: yellow;
+    padding: 1rem;
+    border-top-left-radius: 3rem;
+    border-bottom-left-radius: 3rem;
+}
+
+.input-group-prepend:last-child > span {
+    background-color: yellow;
+    padding: 1rem;
+    border-top-right-radius: 3rem;
+    border-bottom-right-radius: 3rem;
+}
+
+.form-control {
+    /*background-color: #fdd000;*/
+    outline: none;
+}
+
+.form-label {
+    background-color: yellow;
+    direction: rtl;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 3rem !important;
+}
+
+#customRange2 {
+    color: purple;
+}
+
+.input-wrap {
+    top: 0;
+    left: -100%;
+    position: absolute;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-lbl {
+    position: absolute;
+    visibility: hidden;
+    bottom: 55.5%;
+    background-color: yellow;
+    padding: 1rem;
+    border-radius: 7px;
+    direction: rtl;
+}
+
+.input-wrap > textarea, .input-wrap > input {
+    margin: 1rem;
+    border: 1px solid black;
+    background-color: #fdd000;
+    direction: rtl;
+    outline: none;
+    border-radius: 7px;
+    width: 0;
+    height: 0;
+    transition: .5s all;
+    visibility: hidden;
+}
+
+.input-wrap > input {
+    border-radius: 40px;
+}
+
+.input-wrap-show {
+    position: relative;
+    left: 0;
+}
+
+.input-hide {
+    display: none !important;
+    visibility: hidden !important;
+    width: 0 !important;
+    height: 0 !important;
+}
+
+.input-group {
+    display: none;
+}
+
+.textarea-hide {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    visibility: hidden !important;
+}
+
+.circle {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+    border-radius: 50%;
+    /*height: 70%;*/
+    width: 80%;
+    border: 2px solid white;
+}
+
+.circle::before {
+    content: '';
+    display: block;
+    padding-bottom: 100%;
+}
+
+.circle span {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: grey;
+    transform: translate(10px, 10px); /* half width and height */
+    border-radius: 50%;
+    border: 4px solid white;
+    transition: background-color 2s;
+}
+
+.top, .bottom {
+    background-color: white !important;
+}
+
+/* manually handled you can calculate but points are not a lot */
+.top {
+    bottom: 100%;
+    right: 50%;
+}
+
+.top-right-1 {
+    right: 24%;
+    bottom: 93%;
+}
+
+.top-right-2 {
+    bottom: 75%;
+    right: 6.5%;
+}
+
+.right {
+    bottom: 50%;
+    right: 0;
+    background-color: yellow !important;
+}
+
+.right-bottom-1 {
+    bottom: 25%;
+    right: 6.5%;
+}
+
+.right-bottom-2 {
+    bottom: 7.5%;
+    right: 24%;
+}
+
+.bottom {
+    bottom: 0;
+    right: 50%;
+}
+
+.bottom-left-1 {
+    right: 77%;
+    bottom: 7.5%;
+}
+
+.bottom-left-2 {
+    bottom: 25%;
+    right: 93.5%;
+}
+
+.left {
+    right: 100%;
+    bottom: 50%;
+    background-color: yellow !important;
+}
+
+.left-top-1 {
+    bottom: 75%;
+    right: 93.5%;
+}
+
+.left-top-2 {
+    bottom: 92.5%;
+    right: 77%;
+}
+
+
+.CustomBtn {
+    height: auto;
+    width: 65%;
+    border: 1px solid black;
+    background-color: yellow;
+    padding: 1.5rem;
+    border-radius: 40px;
+    outline: none;
+    font-size: 1.5rem;
+    box-shadow: black 3px 3px 18px 0;
+    transform: none;
+    transition: all .5s;
+    transform-origin: right;
+}
+
+.CustomBtn:hover {
+    /*transform: perspective();*/
+    box-shadow: 18px 18px 18px 0 black;
+}
+
+.CustomBtn:hover + .label-wrap-left {
+    transform: translateX(20px);
+}
+
+.CustomBtn:hover + .label-wrap-right {
+    transform: translateX(-20px);
+}
+
+.label-wrap-left, .label-wrap-right {
+    padding: 1rem 1.5rem;
+    position: absolute;
+    border-radius: 50%;
+    color: yellow;
+    font-weight: 600;
+    font-size: 1.5rem;
+    transition: all .3s;
+}
+
+.label-wrap-left {
+    left: 15%;
+}
+
+.label-wrap-right {
+    right: 15%;
+}
+
+.inner-circle {
+    width: 60%;
+    border-radius: 50%;
+    perspective: 150rem;
+    /*z-index: 2;*/
+}
+
+.circle-side {
+    box-shadow: black 3px 3px 18px 0;
+    background-color: rgba(0, 0, 0, 0);
+    height: 100%;
+    border-radius: 50%;
+    transition: all .8s ease;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    vertical-align: top;
+    background-color: white;
+}
+
+.circle-side.back {
+    transform: rotateY(-180deg);
+    padding: 0;
+}
+
+.circle-side.back > .btn {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle-side.back > .btn > i {
+    font-size: 9rem;
+}
+
+.inner-circle::before {
+    content: '';
+    display: block;
+    padding-bottom: 100%;
+}
+
+.inner-circle p {
+    font-weight: 600;
+    font-size: 2rem;
+    text-align: center;
+    color: grey;
+    margin: 1rem;
+}
+
+.conn {
+    position: absolute;
+    background-color: white;
+    height: 2px;
+    transform-origin: left;
+    z-index: 0;
+    transition: all .2s ease;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    /*z-index: -1;*/
+}
+
+@media screen and (max-width: 768px) {
+
+    .gear-wrap {
+        align-items: center !important;
+        flex-direction: column !important;
+        justify-content: space-evenly !important;
+    }
+
+    .circle-wrap {
+        width: 100% !important;
+        order: 1;
+        flex-direction: column !important;
+    }
+
+    .inner-circle p {
+        font-size: 1rem !important;
+    }
+
+    .box-wrap {
+        /*order: 2;*/
+        justify-content: center !important;
+        height: fit-content;
+        width: 100%;
+    }
+
+    .label-wrap-right {
+        right: 10% !important;
+    }
+
+    .label-wrap-left {
+        left: 10% !important;
+    }
+
+    .CustomBtn:hover {
+        /*transform: perspective();*/
+        box-shadow: none;
+    }
+
+    .CustomBtn:hover + .label-wrap-left {
+        transform: none;
+    }
+
+    .CustomBtn:hover + .label-wrap-right {
+        transform: none;
+    }
+
+    .input-group {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .inner-circle p {
+        font-size: 1.3rem;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .label-wrap-left {
+        left: 20%;
+    }
+
+    .label-wrap-right {
+        right: 20%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .inner-circle p {
+        font-size: .9rem !important;
+    }
+}
+
+@media screen and (max-width: 294px) {
+    .inner-circle p {
+        font-size: .8rem !important;
+    }
+}

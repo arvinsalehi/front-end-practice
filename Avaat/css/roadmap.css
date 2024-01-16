@@ -1,0 +1,241 @@
+body {
+    overflow: hidden;
+}
+
+
+.container-fluid {
+    margin: 0 !important;
+    height: 100vh;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+
+}
+
+.in {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    transform-style: preserve-3d;
+    transition: all 1.0s linear;
+}
+
+/*.container-fluid:hover .in {*/
+/*  transform: rotateY(180deg);*/
+/*}*/
+
+/*.face {*/
+/*  position: absolute;*/
+/*  width: 100%;*/
+/*  height: 100%;*/
+/*  backface-visibility: hidden;*/
+/*}*/
+/*.face.back {*/
+/*  display: block;*/
+/*  transform: rotateY(180deg);*/
+/*  box-sizing: border-box;*/
+/*  padding: 10px;*/
+/*  color: white;*/
+/*  text-align: center;*/
+/*  background-color: #00F;*/
+/*}*/
+/*.face.front{*/
+/*  background-color: #F00;*/
+/*  color: #FFF;*/
+/*  text-align: center;*/
+/*  padding: 10px;*/
+/*}*/
+
+.line-wrap {
+    /*background-image: url("2.jpg");*/
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    z-index: 10;
+}
+
+.img-wrap {
+    width: 100%;
+    height: 100%;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.line, .clearfix {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    height: max-content;
+}
+
+.clearfix {
+    margin-bottom: 0;
+}
+
+span {
+    display: inline-block;
+}
+
+
+.left {
+    position: absolute;
+    width: 100%;
+}
+
+.circle {
+    height: 1.5rem;
+    width: 1.5rem;
+    background-image: radial-gradient(
+            ellipse at center, #ffffff 0, rgb(252, 252, 252), rgba(250, 252, 250, 0.39) 100%
+    );
+    border-radius: 50%;
+    position: absolute;
+    z-index: 11;
+    transform-origin: center;
+    box-shadow: 0 0 10px white;
+    pointer-events: none;
+}
+
+.active {
+    background-image: radial-gradient(
+            ellipse at center, #fff900 0, rgba(255, 249, 0, 0.85), rgba(255, 249, 0, 0.2) 100%
+    );
+    animation: 2s blink infinite;
+    box-shadow: 0 0 10px #fff900;
+    pointer-events: auto;
+}
+
+@media only screen and (min-width: 1700px) {
+    .circle {
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+
+    .conn {
+        height: .1rem !important;
+    }
+
+    .info-input {
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .circle {
+        height: 1rem;
+        width: 1rem;
+    }
+
+    .conn {
+        height: .1rem !important;
+    }
+
+    .info-input {
+        height: 1rem;
+        width: 1rem;
+    }
+}
+
+.n-1 {
+    margin-left: 39.21%;
+}
+
+.n-2 {
+    margin-left: 36.9%;
+    margin-top: -1%;
+}
+
+.n-3 {
+    margin-left: 54.5%;
+    margin-top: -1.5%;
+}
+
+.n-4 {
+    margin-left: 43%;
+}
+
+.n-5 {
+    margin-left: 53.8%;
+    margin-top: 0.1rem;
+}
+
+.n-6 {
+    margin-left: 57.6%;
+}
+
+.n-7 {
+    margin-left: 46%;
+}
+
+.n-8 {
+    margin-left: 24%;
+}
+
+.n-9 {
+    margin-left: 70.3%;
+}
+
+@keyframes blink {
+    50% {
+        background-image: radial-gradient(
+                ellipse at center, #1aff00 0, rgba(0, 255, 13, 0.85), rgba(34, 255, 0, 0.2) 100%
+        );
+    }
+}
+
+@keyframes exit-blink {
+    70% {
+        background-image: radial-gradient(ellipse at center, #ff0000 0, rgba(229, 0, 0, 0.37), rgba(255, 0, 0, 0.13) 50%)
+    }
+}
+
+
+.choice-area {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    top: 0;
+    left: 0;
+}
+
+.conn {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.33);
+    height: 1px;
+    transform-origin: left;
+}
+
+.popup {
+    cursor: auto !important;
+}
+
+.exit {
+    background-image: none;
+    background-color: rgba(255, 0, 0, 0.28);
+    animation: 2s exit-blink infinite;
+    box-shadow: none;
+}
+
+@keyframes span {
+    50% {
+        width: 100%;
+    }
+}
+
+iframe {
+    /*display: block;*/
+    position: absolute;
+    z-index: 30;
+    width: 0;
+    height: 0;
+    top: 50%;
+    margin: auto;
+    transition: all .7s;
+}

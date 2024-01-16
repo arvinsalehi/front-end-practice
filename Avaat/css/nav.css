@@ -1,0 +1,104 @@
+.navbar {
+    position: absolute;
+    width: 10%;
+    height: 100%;
+    right: 0;
+    top: 0;
+    background-color: white;
+    z-index: 11;
+    background-color: rgba(0, 0, 0, 0);
+    flex-direction: column;
+    padding: 0;
+    overflow: hidden;
+    justify-content: flex-start;
+    /*backdrop-filter: blur(3px); */
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+    margin: 0;
+    /*height: 0;*/
+}
+
+li {
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .5s all linear;
+}
+
+.hide {
+    padding: 0;
+    border: none;
+}
+
+.show {
+    border-bottom: 1px solid grey;
+    padding: .5rem;
+    height: 100%;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+li:hover a {
+    color: red;
+
+}
+
+li:hover {
+    background: #cbcbcb;
+}
+
+li:first-child {
+    text-align: center !important;
+}
+
+li:nth-child(2n) {
+    text-align: right;
+}
+
+li:nth-child(2n+1) {
+    text-align: left;
+}
+
+.navbar-header {
+    width: 100%;
+    height: 10%;
+}
+
+.drop {
+    float: right;
+    width: 100%;
+}
+
+.drop > button {
+    width: 100%;
+    padding: .5rem;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    border-bottom: 1px solid gray;
+}
+
+.drop > button > i {
+    font-size: 2rem;
+    color: yellow;
+    /*transition: 1s;*/
+}
+
+@media only screen and (min-width: 2560px) {
+    li,i {
+        font-size: 2rem;
+    }
+    .drop > button > i{
+        font-size: 4rem;
+    }
+}

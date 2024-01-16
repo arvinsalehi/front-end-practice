@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/underConst.css">
+    <title>Title</title>
+</head>
+<body>
+</body>
+<div class="container-fluid">
+    <div class="wrap">
+        <div class="row">
+            <img src="image/avaat%20logo.png" width="200px" height="200px" alt="">
+        </div>
+        <div class="row">
+            <p dir="rtl">سایت در حال ساخت است!!!</p>
+            <br>
+            <p dir="rtl">ممنون از صبر و شکیباییتان</p>
+            <br>
+            <p dir="rtl" style="color:#fdd000; font-weight: 300">شرکت آوات</p>
+        </div>
+        <div class="row">
+            <p id="clock" style="color: #8a184a"></p>
+        </div>
+        <div class="row">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
+</div>
+<footer>
+    <script>
+            let countDownDate = new Date("Nov 24, 2021 24:00:00").getTime();
+
+            let x = setInterval(function() {
+
+            // Get today's date and time
+            let now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            let distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Display the result in the element with id="demo"
+            document.getElementById("clock").innerHTML = days + "d " + hours + "h "
+            + minutes + "m " + seconds + "s ";
+
+            // If the count down is finished, write some text
+            if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "EXPIRED";
+        }
+        }, 1000);
+    </script>
+</footer>
+</html>

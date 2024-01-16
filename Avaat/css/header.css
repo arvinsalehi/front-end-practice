@@ -1,0 +1,87 @@
+/*header*/
+nav {
+    padding: 2rem;
+    width: 100%;
+}
+
+/*overriding bootstrap navbar class*/
+.navbar {
+    position: sticky;
+    margin-bottom: 0;
+    top: 0; /* required */
+    z-index: 10;
+    transition: all .5s linear;
+}
+
+/*Logo*/
+.navbar-brand {
+    font-size: 2.7rem;
+    color: yellow!important;
+    /*margin-left: 3rem;*/
+}
+
+/*overriding li in bootstrap navbar*/
+.nav-item {
+    border-radius: 35px;
+    transition: all 1s;
+}
+
+#navbarSupportedContent ul {
+    justify-content: space-between;
+}
+
+/*overriding links in bootstrap navbar*/
+nav li > a {
+    color: white;
+    margin: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+nav li > a:hover {
+    color: white;
+}
+
+.nav-item:hover {
+    background-color: rgba(0, 0, 0, 0.63);
+    color: white;
+    cursor: pointer;
+}
+
+.nav-item {
+    padding: 1rem;
+}
+
+.active-link {
+    background-color: rgba(0, 0, 0, 0.63);
+}
+
+.passed {
+    background-color: #808080;
+}
+
+.passed > #navbarSupportedContent > ul > li > a {
+    color: yellow!important;
+}
+
+@media only screen and (min-width: 1700px) {
+    /*Logo*/
+    .navbar-brand {
+        font-size: 4.7rem;
+    }
+
+    /*overriding links in bootstrap navbar*/
+    nav li > a {
+        font-size: 1.7rem;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    nav li > a {
+        color: black;
+    }
+
+    .active-link > a {
+        color: white!important;
+    }
+}
